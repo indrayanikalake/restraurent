@@ -1,0 +1,19 @@
+.summary{
+    background: url('../../assets/maroon.jpg');
+    backdrop-filter: blur(200px);
+    width:50%;
+    margin: 0 17rem;
+    box-shadow:  11px 11px 11px rgb(15, 15, 15);
+    border-radius: 18px;
+}
+.bg{
+    background: url('../../assets/maroon.jpg');
+}
+.summary h2{
+    align-items: center;
+    text-align: center;
+}
+.summary p{
+    margin: 1rem 3rem;
+  
+}

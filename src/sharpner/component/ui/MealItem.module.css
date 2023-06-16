@@ -1,0 +1,15 @@
+.app__menuitem{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(34, 2, 2);
+    box-shadow:inset 15px 15px 15px rgb(78, 2, 2);
+   margin-top: -0.25 rem;
+}
+.app__menuitem_amount{
+   margin: 1rem 0;
+  
+}
+.app__menuitem_head{
+    margin:0 1rem;
+
+}

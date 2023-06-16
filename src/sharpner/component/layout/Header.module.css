@@ -1,0 +1,41 @@
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    background: rgb(48, 1, 1);
+   height: 14vh;
+   border-bottom: 2px solid white;
+  
+}
+.header h1{
+    margin-left: 6rem;
+}
+.header button{
+    margin:1rem 10rem;
+    border-radius: 25px;
+   
+}
+.header span{
+    
+    font-weight: 200px;
+    background: orange;
+    width: 20px;
+}
+.main-image{
+    width: 100%;
+ box-shadow: 5px 5px 5px rgb(5, 5, 5)
+   
+   
+}
+.main-image img{
+    width: 100%;
+    height: 20vh;
+}
+.meal{
+   
+    border-bottom:1px solid gray;
+    width:60%;
+    display: center;
+    margin: 0 16rem;
+    border-radius: 5px;
+}

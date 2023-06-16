@@ -1,9 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {images,data} from '../../constants';
 import { SubHeading,MenuItem } from '../../components';
 import './SpecialMenu.css';
+import Wrap from '../../sharpner/Wrap';
+import { Cart } from '../../sharpner/component';
 
-const SpecialMenu = () => (
+const SpecialMenu = ({onClose}) => {
+  const [table, setTable] = useState(false);
+
+  const openTableHandler=()=>{
+    setTable(true);
+  }
+
+  const closeTableHandler=()=>{
+    setTable(false);
+  }
+
+  return(
   <div className='app__specialMenu flex__center section__padding' id='menu'>
    <div className='app__specialMenu-tile'>
      <SubHeading title='Menu that fits you Palace' />
@@ -33,10 +46,17 @@ const SpecialMenu = () => (
    </div>
 
    </div>
-   <div style={{marginTop:'15px'}}>
-     <button type='button' className='custom__button'>View More</button>
+   <div  style={{marginTop:'15px'}}>
+     <button type='button' className='custom__button'  onClick={openTableHandler}>View More</button>
+     {table && (
+        <div className='appp__navbar-table slide-bottom '>
+          <Wrap onClose={closeTableHandler}/>
+        </div>)}  
+      
    </div>
+  
   </div>
 );
+}
 
 export default SpecialMenu;

@@ -5,7 +5,7 @@ import classes from './Cart.module.css';
 import CartContext from '../../Store/Card-Context';
 import Modal from './Modal';
 
-const Cart = ({onClose,closeTableHandler}) => {
+const Cart = ({onClose}) => {
     const cartCtx = useContext(CartContext);
     const totalAmount = cartCtx.totalAmount.toFixed(2);
     const hasItem=cartCtx.items.length>0;
@@ -20,7 +20,7 @@ const Cart = ({onClose,closeTableHandler}) => {
     
     const handleOrder=()=>{
       onClose();
-      closeTableHandler();
+   
       window.location.href='#intro';
     }
     
@@ -30,8 +30,7 @@ const Cart = ({onClose,closeTableHandler}) => {
                 <div className={classes.cartCtx} >
                 <p className='p__cormorant'style={{color:'#DCCA87'}}>{item.name}</p>
                 <span>
-                
-                <button className='custom__button' style={{width:'2px',height:'5vh',}}>x{item.amount}
+                <button className='custom__button' style={{width:'2px',height:'5vh',}}>{item.amount}
                 <span className='p__opensanse' style={{ margin:'0 1rem',color:'#AAA'}}>${(item.price).toFixed(2)}<span>
                 <button
                className='custom__button'

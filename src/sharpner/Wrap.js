@@ -7,6 +7,10 @@ import { Cart, Header } from "./component";
 
 const Wrap = () => {
   const [cartIsShown, setCartIsShown] = useState(false);
+  
+
+ 
+
   const showCart=()=>{
     setCartIsShown(true);
   }
@@ -18,7 +22,9 @@ const Wrap = () => {
    <CartProvider>
       {cartIsShown && (<Cart onClose={hideCart} />)}
        
-       <Header onShow={showCart}/>
+
+       <Header  onShow={showCart}/>
+       
     </CartProvider>
   )
 }

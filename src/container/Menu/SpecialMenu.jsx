@@ -3,18 +3,16 @@ import {images,data} from '../../constants';
 import { SubHeading,MenuItem } from '../../components';
 import './SpecialMenu.css';
 import Wrap from '../../sharpner/Wrap';
-import { Cart } from '../../sharpner/component';
 
-const SpecialMenu = ({onClose}) => {
+
+const SpecialMenu = () => {
   const [table, setTable] = useState(false);
 
   const openTableHandler=()=>{
     setTable(true);
   }
+  
 
-  const closeTableHandler=()=>{
-    setTable(false);
-  }
 
   return(
   <div className='app__specialMenu flex__center section__padding' id='menu'>
@@ -26,9 +24,9 @@ const SpecialMenu = ({onClose}) => {
    <div className='app__specialMenu-menu_wine flex__center'>
     <p className='app_specialMenu-menu_heading'>Cold Drinks</p>
     <div className='app__specialMenu_menu_items'>
-    {data.wines.map((wine,index)=>{
+    {data.cofees.map((cofee,index)=>{
       return(
-      <MenuItem key={wine.title+index} title={wine.title}  price={wine.price} tags={wine.tags} />
+      <MenuItem key={cofee.title+index} title={cofee.title}  price={cofee.price} tags={cofee.tags} />
     )})}
     </div>
    </div>
@@ -38,9 +36,9 @@ const SpecialMenu = ({onClose}) => {
    <div className='app__specialMenu-menu_cocktails flex__center'>
     <p className='app_specialMenu-menu_heading'>Cocktails</p>
     <div className='app__specialMenu_menu_items'>
-    {data.cocktails.map((cocktail,index)=>{
+    {data.coldDrinks.map((coldDrink,index)=>{
       return(
-     <MenuItem key={cocktail.title+index} title={cocktail.title} price={cocktail.price} tags={cocktail.tags} />
+     <MenuItem key={coldDrink.title+index} title={coldDrink.title} price={coldDrink.price} tags={coldDrink.tags} />
     )})}
     </div>
    </div>
@@ -50,7 +48,7 @@ const SpecialMenu = ({onClose}) => {
      <button type='button' className='custom__button'  onClick={openTableHandler}>View More</button>
      {table && (
         <div className='appp__navbar-table slide-bottom '>
-          <Wrap onClose={closeTableHandler}/>
+          <Wrap />
         </div>)}  
       
    </div>

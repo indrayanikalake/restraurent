@@ -1,82 +1,60 @@
 import images from './images';
 
-const wines = [
+const cofees = [
   {
-    title: 'Chapel Hill Shiraz',
+    title: 'Espresso',
     price: '$56',
-    tags: 'AU | Bottle',
+    tags: 'espresso',
   },
   {
-    title: 'Catena Malbee',
+    title: 'Americano',
     price: '$59',
-    tags: 'AU | Bottle',
+    tags: 'Hot water | espresso',
   },
   {
-    title: 'La Vieillw Rose',
+    title:'Cappuccino',
     price: '$44',
-    tags: 'FR | 750 ml',
+    tags: 'Chocolate syrup | Ice Cream',
   },
   {
-    title: 'Rhino Pale Ale',
+    title: 'Mocha',
     price: '$31',
-    tags: 'CA | 750 ml',
+    tags: 'Whipped cream | chocolate syrup',
   },
   {
     title: 'Irish Guinness',
     price: '$26',
-    tags: 'IE | 750 ml',
+    tags: 'Whipped ceam | espresso',
   },
 ];
 
-const cocktails = [
+const coldDrinks = [
   {
-    title: 'Aperol Sprtiz',
-    price: '$20',
-    tags: 'Aperol | Villa Marchesi prosecco | soda | 30 ml',
-  },
-  {
-    title: "Dark 'N' Stormy",
-    price: '$16',
-    tags: 'Dark rum | Ginger beer | Slice of lime',
-  },
-  {
-    title: 'Daiquiri',
+    title: 'Soft Drink',
     price: '$10',
-    tags: 'Rum | Citrus juice | Sugar',
+    tags: '30 ml | special drink',
   },
   {
-    title: 'Old Fashioned',
-    price: '$31',
-    tags: 'Bourbon | Brown sugar | Angostura Bitters',
+    title: "Coke",
+    price: '$13',
+    tags: '20 ml | special drink',
   },
   {
-    title: 'Negroni',
-    price: '$26',
-    tags: 'Gin | Sweet Vermouth | Campari | Orange garnish',
+    title: 'Euro Pale Lager',
+    price: '$10',
+    tags: '20 ml | special drink',
+  },
+  {
+    title: 'Pepsi Cola',
+    price: '$13',
+    tags: '20 ml | special drink',
+  },
+  {
+    title: 'Kirona Light',
+    price: '$10',
+    tags: '20 ml | special drink',
   },
 ];
 
-const awards = [
-  {
-    imgUrl: images.award02,
-    title: 'Bib Gourmond',
-    subtitle: 'Lorem ipsum dolor sit amet, consectetur.',
-  },
-  {
-    imgUrl: images.award01,
-    title: 'Rising Star',
-    subtitle: 'Lorem ipsum dolor sit amet, consectetur.',
-  },
-  {
-    imgUrl: images.award05,
-    title: 'AA Hospitality',
-    subtitle: 'Lorem ipsum dolor sit amet, consectetur.',
-  },
-  {
-    imgUrl: images.award03,
-    title: 'Outstanding Chef',
-    subtitle: 'Lorem ipsum dolor sit amet, consectetur.',
-  },
-];
 
-export default { wines, cocktails, awards };
+export default { cofees,coldDrinks};
